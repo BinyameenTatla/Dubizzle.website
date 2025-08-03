@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export const Hero = () => {
   return (
     <section
-      className="relative h-[40vh] sm:min-h-screen flex flex-col justify-center items-center px-4 text-center bg-cover bg-center bg-no-repeat"
+      className="relative h-[55vh] sm:min-h-screen flex flex-col justify-center items-center px-4 text-center bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url('/k1.jpg')`,
       }}
