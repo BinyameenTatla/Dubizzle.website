@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        scrollXFast: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(-100%)" },
+        bounceSlow: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12%)" },
         },
       },
       animation: {
-        "scroll-x-fast": "scrollXFast 8s linear infinite", // faster than 30s
+        "bounce-slow": "bounceSlow 2.8s ease-in-out infinite",
       },
     },
   },

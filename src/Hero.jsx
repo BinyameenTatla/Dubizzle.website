@@ -3,32 +3,34 @@ import { motion } from "framer-motion";
 export const Hero = () => {
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 text-center bg-cover bg-center bg-no-repeat"
+      className="relative h-[40vh] sm:min-h-screen flex flex-col justify-center items-center px-4 text-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/v1.jpg')`, // Replace with your actual image path
+        backgroundImage: `url('/k1.jpg')`,
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-white bg-opacity-80 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-white bg-opacity-80 backdrop-blur-sm" />
 
-      {/* Content */}
-      <div className="relative z-10">
-        {/* WE ARE */}
+      <div className="relative z-10 pt-6 sm:pt-0">
+        {/* Fancy WE ARE Heading */}
         <motion.h2
-          className="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-4 uppercase tracking-widest"
-          initial={{ opacity: 0, y: -80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          className="text-4xl sm:text-6xl font-extrabold uppercase tracking-widest bg-gradient-to-r from-red-600 via-pink-500 to-yellow-400 bg-clip-text text-transparent drop-shadow-lg"
+          initial={{ opacity: 0, y: -100, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",
+            delay: 0.2,
+          }}
         >
           WE ARE
         </motion.h2>
 
         {/* Logo Text */}
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-4xl sm:text-7xl font-extrabold tracking-tight"
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-4xl sm:text-7xl font-extrabold tracking-tight mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
+          transition={{ delay: 1, duration: 0.8 }}
         >
           <span className="text-gray-800 flex items-center gap-1">
             du
@@ -46,7 +48,7 @@ export const Hero = () => {
           className="mt-4 text-base sm:text-lg text-gray-600"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          transition={{ delay: 1.6, duration: 0.6 }}
         >
           formerly <span className="text-blue-800 font-semibold">empglabs</span>
         </motion.p>
